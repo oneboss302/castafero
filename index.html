@@ -3,144 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Castafero | IT Infrastructure Leader</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>IronPath Strategy | Fractional CTO & Strategic IT Advisory</title>
     <style>
         :root {
-            --bg-color: #0a0a0b;
-            --text-color: #e4e4e7;
-            --accent-color: #3b82f6;
-            --card-bg: #18181b;
-            --border-color: #27272a;
+            --primary: #003366;
+            --secondary: #00509d;
+            --accent: #ffcc00;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+            --bg-dark: #0b1a2a;
+            --bg-light: #ffffff;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
         }
-        header { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; text-align: center; }
-        h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.05em; }
-        .subtitle { font-size: 1.25rem; color: #a1a1aa; max-width: 600px; margin: 0 auto 2rem; }
-        .cta-button { display: inline-block; background-color: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: opacity 0.2s; }
-        section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
-        h2 { font-size: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
-        .experience-item { margin-bottom: 3rem; }
-        .experience-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
-        .role { font-weight: 600; color: var(--accent-color); }
-        .date { color: #a1a1aa; font-size: 0.9rem; }
-        .company { font-weight: 600; margin-bottom: 1rem; }
-        ul { list-style: none; margin-top: 1rem; }
-        li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
-        li::before { content: "→"; position: absolute; left: 0; color: var(--accent-color); }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-        .skill-category h3 { font-size: 1rem; margin-bottom: 1rem; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.1em; }
-        footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid var(--border-color); color: #71717a; }
+
+        header {
+            background: var(--bg-dark);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 1px; }
+
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        nav a:hover { color: var(--accent); }
+
+        .hero {
+            background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
+            background-size: cover;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; }
+
+        .cta-button {
+            background: var(--accent);
+            color: var(--bg-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 50px 5%;
+            background: #f1f1f1;
+            text-align: center;
+        }
+
+        .stat-item h2 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+        .stat-item p { font-weight: bold; color: #555; }
+
+        .section-title { text-align: center; margin: 50px 0 30px; font-size: 2rem; color: var(--primary); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 5% 50px;
+        }
+
+        .service-card {
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        .service-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .service-card h3 { color: var(--secondary); margin-top: 0; }
+
+        .experience-section { background: #fafafa; padding: 50px 5%; }
+        .exp-item { margin-bottom: 30px; border-left: 4px solid var(--secondary); padding-left: 20px; }
+        .exp-header { display: flex; justify-content: space-between; font-weight: bold; }
+        .company { color: var(--secondary); margin-bottom: 10px; }
+
+        .skills-section { padding: 50px 5%; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .skill-cat h3 { border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px; }
+
+        footer { background: var(--bg-dark); color: white; text-align: center; padding: 30px; margin-top: 50px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Patrick Castafero</h1>
-        <p class="subtitle">Infrastructure Manager | U.S. Navy Veteran | Proven Leader in IT Infrastructure & Team Management</p>
-        <a href="mailto:patrick@castafero.com" class="cta-button">Connect for Strategy</a>
-    </header>
 
-    <section id="about">
-        <h2>Professional Profile</h2>
-        <p>U.S. Navy Veteran and Drexel University graduate with over 15 years of progressive experience in Information Technology. Expert in building, securing, and managing scalable infrastructure across small and large organizations. Dedicated to cultivating the next generation of IT leaders through proactive coaching and technical mentorship.</p>
-    </section>
+<header>
+    <div class="logo">IRONPATH STRATEGY</div>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Expertise</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="services">
-        <h2>Services</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Fractional CTO</h3>
-                <p>On-demand executive leadership to align your technology roadmap with business objectives.</p>
-            </div>
-            <div class="skill-category">
-                <h3>Strategic IT Advisory</h3>
-                <p>Navigating complex technical landscapes, from vendor selection to multi-cloud architecture and enterprise modernization.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+    <h1>Strategic IT Leadership for Scale & Stability</h1>
+    <p>Fractional CTO & Strategic IT Advisory providing executive-level technology vision without the full-time overhead.</p>
+    <a href="mailto:Patrick@Castafero.com" class="cta-button">Connect for Strategy</a>
+</section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="role">Infrastructure Manager North America</span>
-                <span class="date">July 2023 - Present</span>
-            </div>
-            <div class="company">Invacare Corporation</div>
-            <ul>
-                <li>Leading infrastructure operations across North American sites.</li>
-                <li>Managing enterprise-level security and end-user services.</li>
-                <li>Optimizing multi-site infrastructure for scale and stability.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="role">Infrastructure Manager</span>
-                <span class="date">Jan 2023 - July 2023</span>
-            </div>
-            <div class="company">Public Health Management Corporation</div>
-            <ul>
-                <li>Oversaw organizational IT infrastructure and server operations.</li>
-                <li>Implemented strategic improvements to service delivery models.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="role">Senior Engineer</span>
-                <span class="date">Jan 2022 - Jan 2023</span>
-            </div>
-            <div class="company">The Judge Group</div>
-            <ul>
-                <li>Provided high-level engineering support for complex client environments.</li>
-                <li>Led VMware and VDI optimization projects.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="role">IT Manager</span>
-                <span class="date">Jan 2020 - Aug 2021</span>
-            </div>
-            <div class="company">Logan Capital Management, Inc.</div>
-            <ul>
-                <li>Directed all IT operations for a leading capital management firm.</li>
-                <li>Ensured 100% uptime for critical financial systems.</li>
-            </ul>
-        </div>
-    </section>
+<section class="stats-grid">
+    <div class="stat-item">
+        <h2>$110K</h2>
+        <p>Annual Azure Savings</p>
+    </div>
+    <div class="stat-item">
+        <h2>$960K</h2>
+        <p>Support Cost Reduction</p>
+    </div>
+    <div class="stat-item">
+        <h2>ZERO</h2>
+        <p>Disruption Relocations</p>
+    </div>
+    <div class="stat-item">
+        <h2>15+</h2>
+        <p>Years IT Expertise</p>
+    </div>
+</section>
 
-    <section id="skills">
-        <h2>Core Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Leadership</h3>
-                <p>Team Management, Strategic Planning, ITIL, Vendor Management</p>
-            </div>
-            <div class="skill-category">
-                <h3>Infrastructure</h3>
-                <p>VMware, VDI, Cloud (AWS/Azure), Server Administration</p>
-            </div>
-            <div class="skill-category">
-                <h3>Security</h3>
-                <p>Network Security, Compliance, Disaster Recovery</p>
-            </div>
+<h2 id="services" class="section-title">Strategic Services</h2>
+<section class="services-grid">
+    <div class="service-card">
+        <h3>Fractional CTO</h3>
+        <p>On-demand executive leadership to align your technology roadmap with business objectives. Scaling infrastructure, teams, and strategy.</p>
+    </div>
+    <div class="service-card">
+        <h3>Strategic IT Advisory</h3>
+        <p>Navigating complex technical landscapes, from vendor selection to multi-cloud architecture and enterprise modernization.</p>
+    </div>
+    <div class="service-card">
+        <h3>M&A Tech Due Diligence</h3>
+        <p>Identifying hidden risks and technical debt during acquisitions. Post-merger integration planning and execution.</p>
+    </div>
+    <div class="service-card">
+        <h3>Operational Efficiency</h3>
+        <p>Driving profit back into the business by identifying waste in cloud spend, negotiating contracts, and optimizing service models.</p>
+    </div>
+</section>
+
+<section id="experience" class="experience-section">
+    <h2 class="section-title">Professional Journey</h2>
+    
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Associate Director of Infrastructure</span>
+            <span>July 2023 - Present</span>
         </div>
-    </section>
+        <div class="company">Invacare Corporation</div>
+        <ul>
+            <li>Leading infrastructure operations across North American sites for a global medical equipment manufacturer.</li>
+            <li>Managing enterprise-level security protocols and end-user services for a diverse workforce.</li>
+            <li>Optimizing multi-site infrastructure for scale, stability, and high availability.</li>
+        </ul>
+    </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Ready to optimize your technology footprint?</p>
-        <a href="mailto:patrick@castafero.com" class="cta-button">Secure Your Strategy</a>
-    </section>
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Infrastructure Manager</span>
+            <span>Jan 2023 - July 2023</span>
+        </div>
+        <div class="company">Public Health Management Corporation</div>
+        <ul>
+            <li>Oversaw organizational IT infrastructure and server operations for a large non-profit health institute.</li>
+            <li>Implemented strategic improvements to service delivery models and modernized data center operations.</li>
+        </ul>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Patrick Castafero. All Rights Reserved.</p>
-    </footer>
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Senior Engineer</span>
+            <span>Jan 2022 - Jan 2023</span>
+        </div>
+        <div class="company">The Judge Group</div>
+        <ul>
+            <li>Provided high-level engineering support for complex client environments across various industries.</li>
+            <li>Led VMware and VDI (Virtual Desktop Infrastructure) optimization projects to improve remote work efficiency.</li>
+        </ul>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Technology Manager</span>
+            <span>Aug 2021 - Jan 2022</span>
+        </div>
+        <div class="company">Phoenix Services, LLC</div>
+        <ul>
+            <li>Managed technology initiatives and infrastructure strategy for a global industrial services provider.</li>
+        </ul>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Associate Director of Infrastructure</span>
+            <span>2017 - 2020</span>
+        </div>
+        <div class="company">Drexel University College of Medicine</div>
+        <ul>
+            <li>Designed and managed enterprise VMware infrastructure and large-scale VDI environments.</li>
+            <li>Spearheaded server modernization and cloud integration projects.</li>
+        </ul>
+    </div>
+
+    <div class="exp-item">
+        <div class="exp-header">
+            <span>Petty Officer 3rd Class</span>
+            <span>1993 - 1997</span>
+        </div>
+        <div class="company">U.S. Navy</div>
+        <ul>
+            <li>Responsible for the installation and maintenance of shipboard surveillance and flight deck landing systems.</li>
+            <li>Managed a work center of 7 junior personnel, ensuring operational readiness under high-pressure conditions.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="skills" class="skills-section">
+    <h2 class="section-title">Core Expertise</h2>
+    <div class="skills-grid">
+        <div class="skill-cat">
+            <h3>Leadership</h3>
+            <p>Team Management, Strategic Planning, ITIL, Vendor Management, Coaching & Mentorship.</p>
+        </div>
+        <div class="skill-cat">
+            <h3>Infrastructure</h3>
+            <p>VMware vSphere/Horizon, Cloud (AWS/Azure), Server Administration, VDI Architecture.</p>
+        </div>
+        <div class="skill-cat">
+            <h3>Security</h3>
+            <p>Enterprise Security, Network Security, Compliance, Disaster Recovery Planning.</p>
+        </div>
+        <div class="skill-cat">
+            <h3>Strategy</h3>
+            <p>Fractional CTO, M&A Due Diligence, Cloud Spend Optimization, Service Delivery.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="text-align: center; padding: 50px 5%;">
+    <h2 class="section-title">Secure Your Strategy</h2>
+    <p>Ready to leverage 15+ years of infrastructure expertise for your organization?</p>
+    <a href="mailto:patrick@castafero.com" class="cta-button">Connect Now</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 IronPath Strategy. U.S. Navy Veteran Owned & Operated.</p>
+</footer>
+
 </body>
 </html>
