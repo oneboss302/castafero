@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Castafero | IT Infrastructure Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0b;
+            --text-color: #e4e4e7;
+            --accent-color: #3b82f6;
+            --card-bg: #18181b;
+            --border-color: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item {
+            margin-bottom: 3rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .company {
+            font-weight: 600;
+        }
+
+        .date {
+            color: #71717a;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #a1a1aa;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: #71717a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Patrick Castafero</h1>
+        <p class="subtitle">Infrastructure Manager | U.S. Navy Veteran | Proven Leader in IT Infrastructure & Team Management</p>
+        <a href="mailto:patrick@castafero.com" class="cta-button">Connect for Strategy</a>
+    </header>
+
+    <section id="about">
+        <h2>Professional Profile</h2>
+        <p>U.S. Navy Veteran and Drexel University graduate with over 15 years of progressive experience in Information Technology. Expert in building, securing, and managing scalable infrastructure across small and large organizations. Dedicated to cultivating the next generation of IT leaders through proactive coaching and technical excellence.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="role">Infrastructure Manager North America</span>
+                <span class="date">July 2023 - Present</span>
+            </div>
+            <div class="company">Invacare Corporation</div>
+            <ul>
+                <li>Leading infrastructure operations across North American sites.</li>
+                <li>Managing enterprise-level security and end-user services.</li>
+                <li>Optimizing multi-site infrastructure for scale and stability.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="role">Infrastructure Manager</span>
+                <span class="date">Jan 2023 - July 2023</span>
+            </div>
+            <div class="company">Public Health Management Corporation</div>
+            <ul>
+                <li>Oversaw organizational IT infrastructure and server operations.</li>
+                <li>Implemented strategic improvements to service delivery models.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="role">Senior Engineer</span>
+                <span class="date">Jan 2022 - Jan 2023</span>
+            </div>
+            <div class="company">The Judge Group</div>
+            <ul>
+                <li>Provided high-level engineering support for complex client environments.</li>
+                <li>Led VMware and VDI optimization projects.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="role">IT Manager</span>
+                <span class="date">Jan 2020 - Aug 2021</span>
+            </div>
+            <div class="company">Logan Capital Management, Inc.</div>
+            <ul>
+                <li>Directed all IT operations for a leading capital management firm.</li>
+                <li>Ensured 100% uptime for critical financial systems.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Core Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Leadership</h3>
+                <p>Team Management, Strategic Planning, ITIL, Vendor Management</p>
+            </div>
+            <div class="skill-category">
+                <h3>Infrastructure</h3>
+                <p>VMware, VDI, Cloud (AWS/Azure), Server Administration</p>
+            </div>
+            <div class="skill-category">
+                <h3>Security</h3>
+                <p>Network Security, Compliance, Disaster Recovery</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Patrick Castafero. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
