@@ -13,13 +13,7 @@
             --card-bg: #18181b;
             --border-color: #27272a;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
@@ -27,116 +21,23 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-
-        header {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.05em;
-        }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: #a1a1aa;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .experience-item {
-            margin-bottom: 3rem;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.5rem;
-        }
-
-        .role {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--accent-color);
-        }
-
-        .company {
-            font-weight: 600;
-        }
-
-        .date {
-            color: #71717a;
-            font-size: 0.9rem;
-        }
-
-        ul {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-category h3 {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: #a1a1aa;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        footer {
-            padding: 4rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            color: #71717a;
-        }
+        header { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; text-align: center; }
+        h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.05em; }
+        .subtitle { font-size: 1.25rem; color: #a1a1aa; max-width: 600px; margin: 0 auto 2rem; }
+        .cta-button { display: inline-block; background-color: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: opacity 0.2s; }
+        section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+        h2 { font-size: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+        .experience-item { margin-bottom: 3rem; }
+        .experience-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+        .role { font-weight: 600; color: var(--accent-color); }
+        .date { color: #a1a1aa; font-size: 0.9rem; }
+        .company { font-weight: 600; margin-bottom: 1rem; }
+        ul { list-style: none; margin-top: 1rem; }
+        li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        li::before { content: "→"; position: absolute; left: 0; color: var(--accent-color); }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        .skill-category h3 { font-size: 1rem; margin-bottom: 1rem; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.1em; }
+        footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid var(--border-color); color: #71717a; }
     </style>
 </head>
 <body>
@@ -148,12 +49,25 @@
 
     <section id="about">
         <h2>Professional Profile</h2>
-        <p>U.S. Navy Veteran and Drexel University graduate with over 15 years of progressive experience in Information Technology. Expert in building, securing, and managing scalable infrastructure across small and large organizations. Dedicated to cultivating the next generation of IT leaders through proactive coaching and technical excellence.</p>
+        <p>U.S. Navy Veteran and Drexel University graduate with over 15 years of progressive experience in Information Technology. Expert in building, securing, and managing scalable infrastructure across small and large organizations. Dedicated to cultivating the next generation of IT leaders through proactive coaching and technical mentorship.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Fractional CTO</h3>
+                <p>On-demand executive leadership to align your technology roadmap with business objectives.</p>
+            </div>
+            <div class="skill-category">
+                <h3>Strategic IT Advisory</h3>
+                <p>Navigating complex technical landscapes, from vendor selection to multi-cloud architecture and enterprise modernization.</p>
+            </div>
+        </div>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
-        
         <div class="experience-item">
             <div class="experience-header">
                 <span class="role">Infrastructure Manager North America</span>
@@ -166,7 +80,6 @@
                 <li>Optimizing multi-site infrastructure for scale and stability.</li>
             </ul>
         </div>
-
         <div class="experience-item">
             <div class="experience-header">
                 <span class="role">Infrastructure Manager</span>
@@ -178,7 +91,6 @@
                 <li>Implemented strategic improvements to service delivery models.</li>
             </ul>
         </div>
-
         <div class="experience-item">
             <div class="experience-header">
                 <span class="role">Senior Engineer</span>
@@ -190,7 +102,6 @@
                 <li>Led VMware and VDI optimization projects.</li>
             </ul>
         </div>
-
         <div class="experience-item">
             <div class="experience-header">
                 <span class="role">IT Manager</span>
@@ -220,6 +131,12 @@
                 <p>Network Security, Compliance, Disaster Recovery</p>
             </div>
         </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Ready to optimize your technology footprint?</p>
+        <a href="mailto:patrick@castafero.com" class="cta-button">Secure Your Strategy</a>
     </section>
 
     <footer>
