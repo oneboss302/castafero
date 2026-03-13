@@ -64,15 +64,13 @@
             transition: transform 0.3s;
         }
         .cta-button:hover { transform: scale(1.05); }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 50px 5%;
-            background: #f1f1f1;
-            text-align: center;
-        }
-        .stat-item h2 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+        .stats-grid {.results-banner { background: var(--bg-dark); color: white; padding: 60px 5%; text-align: center; }
+        .results-inner { max-width: 1100px; margin: 0 auto; }
+        .results-eyebrow { letter-spacing: 0.18em; font-size: 11px; text-transform: uppercase; margin-bottom: 32px; opacity: 0.9; }
+        .results-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; }
+        .result-item { flex: 1 1 200px; }
+        .result-number { font-size: 3rem; font-weight: 700; margin-bottom: 8px; color: var(--accent); }
+        .result-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.85;
         .stat-item p { font-weight: bold; color: #555; }
         .section-title { text-align: center; margin: 50px 0 30px; font-size: 2rem; color: var(--primary); }
         .services-grid {
@@ -116,24 +114,29 @@
     <p>Infrastructure, End User Services & Security Manager | IT Operations Lead | Systems Architect with 15+ years experience in highly regulated industries.</p>
     <a href="mailto:Patrick@Castafero.com" class="cta-button">Connect for Strategy</a>
 </section>
-<section class="stats-grid">
-    <div class="stat-item">
-        <h2>$110K</h2>
-        <p>Annual Azure Savings</p>
-    </div>
-    <div class="stat-item">
-        <h2>$960K</h2>
-        <p>Support Cost Reduction</p>
-    </div>
-    <div class="stat-item">
-        <h2>ZERO</h2>
-        <p>Disruption Relocations</p>
-    </div>
-    <div class="stat-item">
-        <h2>15+</h2>
-        <p>Years IT Expertise</p>
-    </div>
-</section>
+<section class="results-banner">
+        <div class="results-inner">
+            <p class="results-eyebrow">Proven Results — Real Business Impact</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">$110K</div>
+                    <div class="result-label">Annual Cloud Cost Savings</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">$960K</div>
+                    <div class="result-label">Operational Efficiency Gains</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">ZERO</div>
+                    <div class="result-label">Downtime During Transitions</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">15+</div>
+                    <div class="result-label">Years Enterprise Leadership</div>
+                </div>
+            </div>
+        </div>
+    </section></section>
 <h2 id="services" class="section-title">Strategic IT Advisory</h2>
 <section class="services-grid">
     <div class="service-card">
